@@ -12,7 +12,7 @@ from packaging import version
 from dialogs import CleaningDialog, RestartDialog, DownloadDialog, UpdateDialog  # Import dialogs
 
 # Define the current version of your application
-CURRENT_VERSION = "1.0.0"  # Update this with your app's version
+CURRENT_VERSION = "1.0.0" # Update this with your app's version
 
 def run_as_admin():
     if not ctypes.windll.shell32.IsUserAnAdmin():
@@ -325,7 +325,7 @@ def download_emu_hud():
 def check_for_updates():
     try:
         # URL to the version information JSON file
-        VERSION_URL = "https://your-server.com/version.json"  # Replace with your actual URL
+        VERSION_URL = "https://github.com/ahmad21109/xagent-optimiser/releases/download/v1.0.1/xagent_optimiser_v1.0.1.exe"  # Replace with your actual URL
 
         # Make an HTTP request to fetch version information
         response = requests.get(VERSION_URL, timeout=5)
