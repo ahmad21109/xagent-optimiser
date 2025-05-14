@@ -126,3 +126,49 @@ class UpdateDialog(QDialog):
 
         layout.addLayout(button_layout)
         layout.addStretch()
+
+class CustomMessageDialog(QDialog):
+    def __init__(self, title, message, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle(title)
+        self.setFixedSize(300, 120)
+        self.setModal(True)
+        self.setStyleSheet("background-color: #0E5053;")
+        
+        layout = QVBoxLayout(self)
+        
+        self.message_label = QLabel(message)
+        self.message_label.setStyleSheet("font-weight: bold; font-size: 14px; color: white;")
+        self.message_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.message_label.setWordWrap(True)
+        layout.addWidget(self.message_label)
+        
+        self.ok_button = QPushButton("OK")
+        self.ok_button.setStyleSheet("background-color: #4CAF50; color: white; font-weight: bold;")
+        self.ok_button.clicked.connect(self.accept)
+        layout.addWidget(self.ok_button)
+        
+        layout.addStretch()
+
+class CustomErrorDialog(QDialog):
+    def __init__(self, title, message, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle(title)
+        self.setFixedSize(300, 150)
+        self.setModal(True)
+        self.setStyleSheet("background-color: #0E5053;")
+        
+        layout = QVBoxLayout(self)
+        
+        self.message_label = QLabel(message)
+        self.message_label.setStyleSheet("font-weight: bold; font-size: 14px; color: white;")
+        self.message_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.message_label.setWordWrap(True)
+        layout.addWidget(self.message_label)
+        
+        self.ok_button = QPushButton("OK")
+        self.ok_button.setStyleSheet("background-color: #4CAF50; color: white; font-weight: bold;")
+        self.ok_button.clicked.connect(self.accept)
+        layout.addWidget(self.ok_button)
+        
+        layout.addStretch()

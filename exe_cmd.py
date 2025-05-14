@@ -19,7 +19,8 @@ def generate_pyinstaller_command(main_script='main.py'):
         return
 
     # Define file extensions to include (excluding the icon file)
-    extensions = ['*.mp3', '*.png', '*.json']
+    extensions = ['*.mp3', '*.png', '*.json', '*.ui']
+
 
     # Collect files in the root directory
     files_to_include = []
@@ -34,7 +35,7 @@ def generate_pyinstaller_command(main_script='main.py'):
 
     # Start building the PyInstaller command
     command = [
-        'pyinstaller', '--noconsole', '--onefile', '--uac-admin', '--name "xagent_optimiser_v1.0.1"', f'--icon "{icon_file}"']
+        'pyinstaller', '--noconsole', '--onefile', '--uac-admin', '--name "xagent_optimiser_v1.0.4"', f'--icon "{icon_file}"']
 
     # Use colon as separator for --add-data on Windows
     separator = ':'

@@ -2,6 +2,7 @@ import sys
 import warnings
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PyQt6 import uic
+import os
 from dialogs import CleaningDialog 
 from button_functions import (  
     clean_memory, clean_disk, optimize_mouse, custom_hud,
@@ -13,11 +14,20 @@ from button_functions import (
 
 warnings.filterwarnings("ignore", category=DeprecationWarning, message="sipPyTypeDict")
 
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        base_path = sys._MEIPASS  # PyInstaller sets this up
+    except AttributeError:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
 class OptimizerWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         try:
-            uic.loadUi("OPTI_UI.ui", self)
+            uic.loadUi(resource_path('OPTI_UI.ui'), self)
             self.setWindowTitle("XAGENT OPTIMISER")
             
             # Configure the slider for power modes

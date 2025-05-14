@@ -148,6 +148,9 @@ color: rgb(255, 255, 255);</string>
         <height>18</height>
        </rect>
       </property>
+      <property name="maximum">
+       <number>90</number>
+      </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -307,6 +310,8 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QTabBar::tab {
+	background-color: rgb(0, 170, 127);
+	alternate-background-color: rgb(0, 170, 127);
 	border-color: rgb(0, 0, 0);
 	border-color: rgb(0, 0, 0);
     background: rgb(14, 80, 83);
@@ -322,7 +327,7 @@ QTabBar::tab:selected {
 }
 QTabWidget::pane {
     border: 5px solid rgb(30, 120, 125); 
-    border-radius: 5px;  
+    border-radius: 5px;
 }
 </string>
       </property>
@@ -399,6 +404,29 @@ color: rgb(255, 255, 255);</string>
          <string>BUY</string>
         </property>
        </widget>
+       <widget class="QFrame" name="frame">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>241</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(14, 80, 83);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <zorder>frame</zorder>
+       <zorder>pushButton_5</zorder>
+       <zorder>pushButton_6</zorder>
+       <zorder>pushButton_7</zorder>
       </widget>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
@@ -470,6 +498,29 @@ color: rgb(255, 255, 255);</string>
          <string>CLOSE</string>
         </property>
        </widget>
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>241</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(14, 80, 83);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <zorder>frame_2</zorder>
+       <zorder>pushButton_8</zorder>
+       <zorder>pushButton_9</zorder>
+       <zorder>pushButton_10</zorder>
       </widget>
      </widget>
     </widget>
@@ -513,7 +564,7 @@ QTabWidget::pane {
 </string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_6">
        <attribute name="title">
