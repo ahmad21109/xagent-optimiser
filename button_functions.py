@@ -15,7 +15,7 @@ from packaging import version
 from dialogs import UpdateDialog, CleaningDialog, RestartDialog, DownloadDialog, CustomMessageDialog, CustomErrorDialog
 import win32com.client
 
-CURRENT_VERSION = "1.0.4"
+CURRENT_VERSION = "1.0.5"
 
 def run_as_admin():
     if not ctypes.windll.shell32.IsUserAnAdmin():
